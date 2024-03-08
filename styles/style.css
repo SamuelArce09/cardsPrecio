@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    background-color: #212121;
+    color: #ddd;
+}
+
+ul {
+    list-style: none;
+}
+
+.main {
+    max-width: 75rem;
+    padding: 3em 1.5em;
+    .main__heading {
+        font-weight: 600;
+        font-size: 2.25em;
+        margin-bottom: 0.75em;
+        text-align: center;
+        color: #eceff1;
+    }
+    .cards {
+        position: relative;
+        .cards__inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5em;
+        }
+    }
+}
+
+.card {
+    --hsl:var(--hue),var(--saturacion),var(--luminosidad);
+    display: grid;
+    flex: 1 1 14rem;
+    grid-template-rows:  auto auto auto 1fr;
+    align-items: start;
+    gap: 1.25em;
+    color: #eceff1;
+    background-color: #2b2b2b;
+    border: 1px solid #eceff133;
+    border-radius: 15px;
+    padding: 1.5em 2em;
+    transition: 400ms background ease;
+    &:hover {
+        background: hsla(var(--hsl), 0.1);
+    }
+    &:nth-child(1) {
+        --hue:165;
+        --saturacion:82.26%;
+        --luminosidad:51.37%;
+    }
+    &:nth-child(2) {
+        --hue:291.34;
+        --saturacion:95.9%;
+        --luminosidad:61.76%;
+    }
+    &:nth-child(3) {
+        --hue:338.69;
+        --saturacion:100%;
+        --luminosidad:48.04%;
+    }
+    .card__heading {
+        font-size: 1.05em;
+        font-weight: 600;
+    }
+
+    .card__price {
+        font-size: 1.75em;
+        font-weight: 700;
+    }
+
+    .card__bullets {
+        
+    }
+    .cta {
+        display: block;
+        text-align: center;
+        align-self: end;
+        margin: 1em 0 0.5em 0;
+        text-decoration: none;
+        color: #fff;
+        background-color: #0d0d0d;
+        padding: 0.7em;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.card__bullets {
+    line-height: 1.4;
+    li {
+        &::before {
+            display: inline-block;
+            content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMBJREFUSEvtlMENwyAQBHc7iTtJKotTiZNK0oo7uWQtkBDC5gj2I5L5+IE1w+0dEAcvHszHKagmfEa0RGRmFwBXks88s+6IAnyS4AsfST5SSZcgg88kh90q8MAl+6kCL3xTYGZ3AC+Sc1p2C3xVEOAjAMFvUdIK3xJo7N4A9F0koYo4LcWGlq71ag/CaVOJRBpFN7za5Eyi/5vgVUFyS1UJSnNee+1cY6pK8mmqgeO+S+CFNTW5B7rbW+Q5xP9H9AGgfUgZHYA4FgAAAABJRU5ErkJggg==");
+            margin-right: 1rem;
+            transform: translateY(0.25rem);
+        }
+    }
+}

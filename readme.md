@@ -1,0 +1,1 @@
+estos son unas cards de precios con un efecto hover que cambia de color
